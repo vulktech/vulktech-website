@@ -1,0 +1,17 @@
+---
+interface Props {
+  text?: string;
+}
+
+const { text = "Available for new projects" } = Astro.props;
+---
+
+<div
+  class="inline-flex items-center gap-2.5 bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-full px-5 py-2.5 transition-all duration-300 hover:bg-white/[0.05] hover:border-white/[0.1]"
+>
+  <span class="relative flex h-2 w-2">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+  </span>
+  <span class="text-sm text-vulk-muted tracking-wide">{text}</span>
+</div>
